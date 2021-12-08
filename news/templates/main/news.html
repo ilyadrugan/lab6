@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{category.name}}{% endblock %}
+{% block content %}
+    <div class="features">
+        {% for new in data.news %}
+        <h3>{{new.title}}</h3>
+        <img src={{new.picture_url}} alt="">
+        <p>{{new.description}}</p>
+        {% endfor %}
+        <a class="btn btn-primary" href="http://127.0.0.1:8000/" role="button">Главная страница</a>
+    </div>
+{% endblock %}
