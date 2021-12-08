@@ -7,6 +7,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    # path('api/', include('api.urls')),
+    path('api/', include('api.urls')),
     path('category/<int:id>/', views.GetNews, name='category_url')
 ]
